@@ -220,6 +220,10 @@
 		<name>Internal Releases</name>
 		<url>http://35.199.14.26:8081/repository/maven-snapshots/</url>
 	</snapshotRepository>
+		    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://35.245.11.10:8081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
 	
 </distributionManagement>
 	
