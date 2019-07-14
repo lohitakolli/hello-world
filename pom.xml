@@ -221,19 +221,9 @@
       <id>nexus-snapshots</id>
       <url>http://35.245.11.10:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
-    <repository>
+   
     
   </distributionManagement>
 		  
 	
-</distributionManagement>
-	
-	
-	 <repositories>
-    <repository>
-      <id>maven-group</id>
-      <url>http://35.245.11.10:8081/repository/maven-group/</url>
-    </repository>
-  </repositories>
-  
 </project>
