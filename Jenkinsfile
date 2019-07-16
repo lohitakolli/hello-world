@@ -21,5 +21,4 @@ stage('compile')
  booleanParam (
             defaultValue: true,
             description: 'third parameter desc',
-            name: 'THIRDPARAMETER')}
-       }
+            name: 'THIRDPARAMETER')}}
