@@ -16,8 +16,8 @@ booleanParam (
             description: 'boolean parameter',
  name: 'FIRSTPARAMETER')}}
 
-stage('compile'){
-{ steps{ sh 'mvn clean compile'}
+stage('compile')
+{ steps { sh 'mvn clean compile'}
  booleanParam (
             defaultValue: true,
             description: 'third parameter desc',
