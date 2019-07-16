@@ -14,6 +14,11 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+    <sonar.host.url>http://35.199.14.26:9000</sonar.host.url>
+    <sonar.log.level>DEBUG</sonar.log.level>
+    <sonar.verbose>true</sonar.verbose>
+    <sonar.coverage.exclusions>**/*.js</sonar.coverage.exclusions>
+</properties>
   </properties>
 
   <modules>
