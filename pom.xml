@@ -92,7 +92,7 @@
     </plugins>
 
     <pluginManagement>
-	    
+	    <plugins>
 		    
         <plugin>
           <artifactId>maven-checkstyle-plugin</artifactId>
