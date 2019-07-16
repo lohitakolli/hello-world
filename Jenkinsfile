@@ -1,4 +1,4 @@
-pipelne{
+pipeline{
  agent{ label 'master'
       }
  tools { maven 'maven' 
