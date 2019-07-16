@@ -27,7 +27,7 @@ pipeline{
  }
 
   stage('sonar-scan') {
-  steps { sh 'mvn install sonar:sonar -D sonar.login=admin -D sonar.password=12345 -Dsonar.url=http://35.199.14.26:9000' 
+  steps { sh 'mvn install sonar:sonar -D sonar.login=admin -D sonar.password=admin -Dsonar.url=http://35.199.14.26:9000' 
         echo "trying: ${params.SECONDPARAMETER}"}
  }
 
