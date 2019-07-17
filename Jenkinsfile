@@ -7,33 +7,44 @@ pipeline{
             booleanParam (
             defaultValue: true,
             description: 'boolean parameter',
-           name: 'FIRSTPARAMETER' )
+            name: 'BUILD' )
                booleanParam (
             defaultValue: true,
             description: 'boolean parameter',
-             name: 'SECONDPARAMETER' )
+             name: 'SONAR' )
              
              booleanParam (
             defaultValue: true,
             description: 'third parameter desc',
-            name: 'THIRDPARAMETER' )
+            name: 'COMPILE' )
             }
  
  stages{
   
- stage( 'Build'){ 
+ stage( 'Build'){
+  when { 
+   expression { params.BUILD }
+       } 
  steps { sh 'mvn clean package' 
-        echo "trying: ${params.FIRSTPARAMETER}" }
+        }
  }
 
   stage('sonar-scan') {
+   when {
+           expression { params.SONAR } 
+        } 
+   
   steps { sh 'mvn install sonar:sonar -D sonar.login=admin -D sonar.password=admin -Dsonar.url=http://35.199.14.26:9000' 
-        echo "trying: ${params.SECONDPARAMETER}"}
+        }
  }
 
   stage('compile'){
+   
+    when {
+           expression { params.COMPILE } 
+          } 
   steps { sh 'mvn clean compile'
-        echo "trying: ${params.THIRDPARAMETER}"}
+       }
    
          }
        }
